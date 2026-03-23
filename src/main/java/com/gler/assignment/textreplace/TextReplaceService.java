@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 public class TextReplaceService {
 
     public Optional<String> replace(String text) {
-        if (text == null) {
+        if (text == null || text.isBlank()) {
             throw new IllegalArgumentException("Text must be provided");
         }
         int length = text.length();
